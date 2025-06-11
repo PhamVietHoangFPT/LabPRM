@@ -1,5 +1,6 @@
 package com.example.lab2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -14,20 +15,21 @@ public class MainActivity extends AppCompatActivity {
     EditText startNumber;
     EditText endNumber;
     Button randomButton;
+    Button calculatorButton;
     TextView result;
+    private static final int CALCULATOR_REQUEST_CODE = 101;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Ánh xạ View một lần ở đây
         startNumber = findViewById(R.id.startNumber);
         endNumber = findViewById(R.id.endNumber);
         randomButton = findViewById(R.id.randomButton);
         result = findViewById(R.id.result);
+        calculatorButton = findViewById(R.id.calculator);
 
-        // Tạo một TextWatcher để lắng nghe sự thay đổi
         TextWatcher textWatcher = new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
@@ -56,6 +58,11 @@ public class MainActivity extends AppCompatActivity {
             } catch (Exception e) {
                 result.setText("Invalid number");
             }
+        });
+
+        calculatorButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, Calculator.class);
+            startActivityForResult(intent, CALCULATOR_REQUEST_CODE);
         });
 
         validateInputs();
