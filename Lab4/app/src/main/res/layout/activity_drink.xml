@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".DrinkActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chọn một đồ uống"
+        android:textSize="22sp"
+        android:layout_marginBottom="20dp"/>
+
+    <RadioGroup
+        android:id="@+id/rgDoUong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbPepsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pepsi" />
+
+        <RadioButton
+            android:id="@+id/rbHeineken"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Heineken" />
+
+        <RadioButton
+            android:id="@+id/rbTiger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tiger" />
+
+        <RadioButton
+            android:id="@+id/rbSaiGonDo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sài gòn Đỏ" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnDatDoUong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="ĐẶT MÓN" />
+
+</LinearLayout>
