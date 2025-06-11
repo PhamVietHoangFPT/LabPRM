@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Lab2 SigninForm"
 include(":app")
+include(":app")
  
